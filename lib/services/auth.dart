@@ -28,7 +28,7 @@ class AuthService {
     final user = _auth.currentUser;
     if (user != null) {
       final userSnapshot = await FirebaseFirestore.instance
-          .collection('users')
+          .collection('/users')
           .where('uid', isEqualTo: user.uid)
           .get();
       if (userSnapshot.docs.isNotEmpty) {

@@ -1,5 +1,3 @@
-enum roles { admin, user }
-
 class User {
   String? name;
   String? emailId;
