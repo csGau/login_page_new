@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:login_page/pages/authenticate/signup.dart';
-import 'package:login_page/pages/home/hotel.dart';
 import 'package:login_page/pages/home/transport.dart';
 import 'package:login_page/services/auth.dart';
 
@@ -25,11 +24,7 @@ class Myhome extends StatelessWidget {
           new ListTile(
             title: new Text('Create Account'),
             onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Appsignup(),
-                  ));
+              AuthService().authorizeAccess(context);
             },
           ),
           new ListTile(
